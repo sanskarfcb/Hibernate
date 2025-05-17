@@ -4,7 +4,7 @@ A hands-on Java project demonstrating core Hibernate features using PostgreSQL a
 
 ---
 
-## 🚀 Technologies Used
+##  Technologies Used
 
 - **Java** (JDK 17 or later)
 - **Hibernate ORM**
@@ -15,7 +15,7 @@ A hands-on Java project demonstrating core Hibernate features using PostgreSQL a
 
 ---
 
-## 🧠 Concepts Covered
+##  Concepts Covered
 
 ✅ Hibernate Setup  
 ✅ `hibernate.cfg.xml` Configuration  
