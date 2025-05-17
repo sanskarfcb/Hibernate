@@ -1,5 +1,6 @@
 package com.example.HibernateLearning.Util;
 
+import com.example.HibernateLearning.Entity.Certificate;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -9,7 +10,7 @@ public class HibernateUtil {
     static {
         try {
             sessionFactory = new Configuration()
-                    .configure("hibernate.cfg.xml")
+                    .configure("hibernate.cfg.xml").addAnnotatedClass(Certificate.class)
                     .buildSessionFactory();
 
         } catch (Exception e) {

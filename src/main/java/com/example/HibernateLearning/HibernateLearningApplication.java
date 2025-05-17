@@ -1,5 +1,6 @@
 package com.example.HibernateLearning;
 
+import com.example.HibernateLearning.Entity.Certificate;
 import com.example.HibernateLearning.Entity.Student;
 import com.example.HibernateLearning.Util.HibernateUtil;
 import org.hibernate.Session;
@@ -16,12 +17,28 @@ public class HibernateLearningApplication {
 
 		Student student = new Student();
 
-		student.setName("Anl");
+		student.setName("Shivam Kumar");
 		student.setAbout("Good in studies and is very lazy");
 		student.setActive(true);
-		student.setCollege_name("AKTU");
-		student.setFathername("Anil Kumar");
-		student.setPhone("1234529");
+		student.setCollege_name("UPTU");
+		student.setFathername("Sanskar Mishra");
+		student.setPhone("12212332214529");
+
+		Certificate certificate = new Certificate();
+		certificate.setTitle("KPIT Certificate");
+		certificate.setAbout("Certificate of exellence from kpit");
+		certificate.setLink("jubucbdsdcscds");
+		certificate.setStudent(student);
+
+		Certificate certificate1 = new Certificate();
+		certificate1.setTitle("Infosys Certificate");
+		certificate1.setAbout("Certificate of exellence from Infosys");
+		certificate1.setLink("jubucbdsedfsdcscds");
+		certificate1.setStudent(student) ;
+
+		student.getCertificates().add(certificate);
+		student.getCertificates().add(certificate1);
+
 
 
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();

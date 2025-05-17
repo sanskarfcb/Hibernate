@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "Student")
 @Getter
@@ -30,5 +33,8 @@ public class Student {
     private boolean active;
 
     private String about;
+
+    @OneToMany (mappedBy = "student" , fetch =FetchType.EAGER, cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<Certificate> certificates = new ArrayList<>();
 
 }
